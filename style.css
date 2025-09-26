@@ -28,17 +28,17 @@ body{
 }
 .envelope-wrapper > .envelope {
   position: relative;
-  width: 300px;
-  height: 230px;
+  width: 520px;
+  height: 270px;
 }
 .envelope-wrapper > .envelope::before {
   content: "";
   position: absolute;
   top: 0;
   z-index: 2;
-  border-top: 130px solid var(--envelope-tab);
-  border-right: 150px solid transparent;
-  border-left: 150px solid transparent;
+  border-top: 260px solid var(--envelope-tab);
+  border-right: 260px solid transparent;
+  border-left: 260px solid transparent;
   transform-origin: top;
   transition: all 0.5s ease-in-out 0.7s;
 }
@@ -48,16 +48,16 @@ body{
   z-index: 2;
   width: 0px;
   height: 0px;
-  border-top: 130px solid transparent;
-  border-right: 150px solid var(--envelope-cover);
-  border-bottom: 100px solid var(--envelope-cover);
-  border-left: 150px solid var(--envelope-cover);
+  border-top: 210px solid transparent;
+  border-right: 270px solid var(--envelope-cover);
+  border-bottom: 180px solid var(--envelope-cover);
+  border-left: 250px solid var(--envelope-cover);
 }
 .envelope > .letter {
   position: absolute;
-  right: 20%;
+  right: 18%;
   bottom: 0;
-  width: 54%;
+  width: 60%;
   height: 80%;
   background: var(--primary);
   text-align: center;
@@ -67,15 +67,15 @@ body{
 }
 
 .envelope > .letter > .text {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Cedarville Cursive';
   color: var(--txt-color);
   text-align: left;
-  font-size: 10px;
+  font-size: 11px;
 }
 .heart {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 57%;
+  left: 49.6%;
   width: 15px;
   height: 15px;
   background: var(--heart-color);
@@ -95,10 +95,10 @@ body{
   border-radius: 50%;
 }
 .heart:before {
-  top: -7.5px;
+  top: -9.5px;
 }
 .heart:after {
-  right: 7.5px;
+  right: 9.5px;
 }
 .flap > .envelope:before {
   transform: rotateX(180deg);
