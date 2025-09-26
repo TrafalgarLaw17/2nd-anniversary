@@ -27,14 +27,28 @@
                     </div>
                 </div>
             </div>
-            <div class="heart"></div>
+            <div class="cat">
+                <img src="./assets/gatito.png" />
+                
+            </div>
         </div>
     </div>
-    <script>
-        const envelope = document.querySelector('.envelope-wrapper');
-        envelope.addEventListener('click', () => {
-            envelope.classList.toggle('flap');
-        });
-    </script>
+
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+             <iframe width="940" height="500"
+                src="./assets/anniversary.mp4"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

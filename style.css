@@ -1,18 +1,19 @@
 :root{
   --primary: #fff;
-  --bg-color: rgb(5, 53, 61);
+  --bg-color: url("./assets/sunflowa.jpg");
   --bg-envelope-color: #f5edd1;
   --envelope-tab: #ecdeb8;
   --envelope-cover: #e6cfa7;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --txt-color: #444;
-  --heart-color: rgb(252, 8, 231);
 }
 body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: var(--bg-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--bg-color);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,34 +73,21 @@ body{
   text-align: left;
   font-size: 11px;
 }
-.heart {
+.cat {
   position: absolute;
   top: 57%;
-  left: 49.6%;
-  width: 15px;
-  height: 15px;
-  background: var(--heart-color);
-  z-index: 4;
-  transform: translate(-50%, -20%) rotate(45deg);
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -30%) rotate(0deg);
   transition: transform 0.5s ease-in-out 1s;
-  box-shadow: 0 1px 6px var(--shadow-color);
   cursor: pointer;
 }
-.heart:before, 
-.heart:after {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: var(--heart-color);
-  border-radius: 50%;
+
+.cat img {
+ width: 50px;
+ height: 50px;
 }
-.heart:before {
-  top: -9.5px;
-}
-.heart:after {
-  right: 9.5px;
-}
+
 .flap > .envelope:before {
   transform: rotateX(180deg);
   z-index: 0;
@@ -109,7 +97,55 @@ body{
   transform: scale(1.5);
   transition-delay: 1s;
 }
-.flap > .heart {
+.flap > .cat {
   transform: rotate(90deg);
   transition-delay: 0.4s;
+}
+
+button img {
+  background: none;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
